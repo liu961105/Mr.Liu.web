@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>java</title>
+		<meta name="keywords" content="点一下,再点一下,再再点一下,点一下" />
+		<meta name="description" content="网站简介，不超过80个字" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/index.css" rel="stylesheet">
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/comm.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">志年的个人博客</div>
+			<div class="top-nav">
+				<h2 id="mnavh"><span class="navicon"></span></h2>
+				<ul id="nav">
+					<li>
+						<a href="../index.html">首页</a>
+					</li>
+					<li>
+						<a href="list.html">Java</a>
+					</li>
+					<li>
+						<a href="mysql.html">MySql</a>
+					</li>
+					<li>
+						<a href="layui.html">layUi</a>
+					</li>
+					<li>
+						<a href="js.html">javaScript/jquery</a>
+					</li>
+					<li>
+						<a href="git.html">git/Linux 命令</a>
+					</li>
+					<li>
+						<a href="about.html">关于我</a>
+					</li>
+					<li>
+						<a href="message.html">留言</a>
+					</li>
+				</ul>
+			</div>
+			<div class="search">
+				<form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+					<input name="keyboard" id="keyboard" class="input_text" value="搜索你想看的" style="color: rgb(153, 153, 153);" onfocus="if(value=='搜索你喜欢的'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='搜索你喜欢的'}" type="text">
+					<input name="show" value="title" type="hidden">
+					<input name="tempid" value="1" type="hidden">
+					<input name="tbname" value="news" type="hidden">
+					<input name="Submit" class="input_submit" value="" type="submit">
+				</form>
+			</div>
+		</header>
+		<aside class="side">
+			<div class="about"> <i><a href="/"><img src="../images/my.jpg"></a></i>
+				<p>刘志年，一个90后草根男（其实也快是00后了；；哈哈）！！！18年入行。一直潜心研究java后端开发，一边工作一边积累经验，分享一些在个人开发过程中遇到的问题并记录下来，方便他人，也方便自己</p>
+			</div>
+			<div class="weixin"><img src="../images/WeChat.jpg">
+				<p>关注我 么么哒！</p>
+			</div>
+		</aside>
+		<main>
+		</main>
+		<div class="main-content">
+			<div class="welcome">您现在的位置是：首页->jQuery动态设置样式</div>
+			<div class="blogbox">
+				<div class="bloglist">
+					<ul>
+						<li>
+							<p class="blogtext">取得第一个段落的color样式属性的值。</p>
+							<p class="blogtext">$("p").css("color");</p>
+							<p class="blogtext">将所有段落的字体颜色设为红色并且背景为蓝色。</p>
+							<p class="blogtext">$("p").css({ "color": "#ff0011", "background": "blue" });</p>
+							<p class="blogtext"> $("p").css("color","red");</p>
+							<p class="blogtext"> 逐渐增加div的大小</p>
+							<p class="blogtext"> $("div").click(function() {</p>
+							<p class="blogtext">$(this).css({</p>
+							<p class="blogtext"> width: function(index, value) {</p>
+							<p class="blogtext"> return parseFloat(value) * 1.2;</p>
+							<p class="blogtext">},</p>
+							<p class="blogtext">height: function(index, value) {</p>
+							<p class="blogtext"> return parseFloat(value) * 1.2;</p>
+							<p class="blogtext">}</p>
+							<p class="blogtext"> });</p>
+							<p class="blogtext"> });</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="rside">
+				<div class="news">
+					<h2 class="newstitle"><b>文章排行</b></h2>
+					<ul>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<body>
+		</body>
+
+</html>
