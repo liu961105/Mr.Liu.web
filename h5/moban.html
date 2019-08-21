@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>java</title>
+		<title>模板引擎</title>
 		<meta name="keywords" content="点一下,再点一下,再再点一下,点一下" />
 		<meta name="description" content="网站简介，不超过80个字" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,19 +65,45 @@
 		<main>
 		</main>
 		<div class="main-content">
-			<div class="welcome">您现在的位置是：首页->jQuery隐藏元素内容</div>
+			<div class="welcome">您现在的位置是：首页->模板引擎</div>
 			<div class="blogbox">
 				<div class="bloglist">
 					<ul>
 						<li>
-							<p class="blogtext">$(document).ready(function(){</p>
-							<p class="blogtext">$(document).ready(function(){</p>
-							<p class="blogtext">$("p").click(function(){</p>
-							<p class="blogtext">$(this).hide();</p>
-							<p class="blogtext"> });</p>
-							<p class="blogtext"> });</p>
-							<p style="color: red;">下方为标签</p>
-							<p>&lt;p&gt;If you click on me, I will disappear.&lt;/p&gt;</p>
+							<p class="blogtext">Handlebars是一款很高效的模版引擎,提供语意化的模版语句,最大的兼容Mustache模版引擎, 提供最大的Mustache模版引擎兼容, 无需学习新语法即可使用;</p>
+							<p class="blogtext">1.把数据放到自己定义的 $lt;&lt;script&gt; 标签中</p>
+							<p class="blogtext">&lt;script id=&quot;entry-template&quot; type=&quot;text/x-handlebars-template&quot;&gt;</p>
+							<p class="blogtext">&nbsp;template content</p>
+							<p class="blogtext">&lt;/script&gt;</p>
+							<p class="bloglist" style="color: green">Html代码</p>
+							<p class="blogtext">&lt;div class=&quot;entry&quot;&gt;</p>
+							<p class="blogtext"> &lt;h1&gt;{{title}}&lt;/h1&gt;</p>
+							<p class="blogtext">&lt;div class=&quot;body&quot;&gt;</p>
+							<p class="blogtext">{{body}}</p>
+							<p class="blogtext">  &lt;/div&gt;</p>
+							<p class="blogtext">&lt;/div&gt;</p>
+							<p class="bloglist" style="color: green;">其中将需要动态放置的数据包含在{{}}中</p>
+							<p class="bloglist" style="color: green;">模板引擎中的if判断有无</p>
+							<p class="blogtext" style="color: green;">HTML 代码:</p>
+							<p class="blogtext">{{#if author}}</p>
+							<p class="blogtext"> &lt;h1&gt;{{firstName}} {{lastName}}&lt;/h1&gt;</p>
+							<p class="blogtext">{{/if}}</p>
+							<p class="blogtext"style="color: red;">注意：此if只能判断是否为空</p>
+							<p class="bloglist" style="color: green;">模板引擎中比较两个字段》》因为原始的模板引擎中没有封装比较，所以需自己封装</p>
+							<p class="bloglist" style="color: green;">js代码</p>
+							<p class="blogtext">Handlebars.registerHelper("compare", function(v1, options) {</p>
+							<p class="blogtext">if (v1 == '施工单位') {</p>
+							<p class="blogtext">return options.fn(this);</p>
+							<p class="blogtext">	} else {</p>
+							<p class="blogtext">return options.inverse(this); </p>
+							<p class="blogtext">	}</p>
+							<p class="blogtext">});</p>
+							<p class="bloglist" style="color: green;">html代码</p>
+							<p class="blogtext">{{#compare unitType}}&nbsp; 其中unitType为动态获取的数据</p>
+							<p class="blogtext">&lt;span class=&quot;oper-handle iconfont icon-shezhi base-orange son-detail&quot; title=&#x27;查看施工人员&#x27; data-pkid=&quot;{{id}}&quot;&gt;&lt;/span&gt;</p>
+							<p class="blogtext">{{/compare}}</p>
+							<p class="bloglist">如需进行两个参数比较，则在js中添加参数即可</p>
+							<p class="blogtext" style="color: orange;">本人应用场景:如果其中单位类型是‘施工单位’，则每一行操作列中都会显示‘查看施工人员按钮’,反值则不显示</p>
 						</li>
 					</ul>
 				</div>
