@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>javaScript</title>
+		<meta name="keywords" content="点一下,再点一下,再再点一下,点一下" />
+		<meta name="description" content="网站简介，不超过80个字" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/index.css" rel="stylesheet">
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/comm.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">志年的个人博客</div>
+			<div class="top-nav">
+				<h2 id="mnavh"><span class="navicon"></span></h2>
+				<ul id="nav">
+					<li>
+						<a href="../index.html">首页</a>
+					</li>
+					<li>
+						<a href="java.html">Java</a>
+					</li>
+					<li>
+						<a href="mysql.html">MySql</a>
+					</li>
+					<li>
+						<a href="layui.html">layUi</a>
+					</li>
+					<li>
+						<a href="js.html">javaScript/jquery</a>
+					</li>
+					<li>
+						<a href="git.html">git/Linux 命令</a>
+					</li>
+					<li>
+						<a href="about.html">关于我</a>
+					</li>
+					<li>
+						<a href="message.html">留言</a>
+					</li>
+				</ul>
+			</div>
+			<div class="search">
+				<form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+					<input name="keyboard" id="keyboard" class="input_text" value="搜索你想看的" style="color: rgb(153, 153, 153);" onfocus="if(value=='搜索你喜欢的'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='搜索你喜欢的'}" type="text">
+					<input name="show" value="title" type="hidden">
+					<input name="tempid" value="1" type="hidden">
+					<input name="tbname" value="news" type="hidden">
+					<input name="Submit" class="input_submit" value="" type="submit">
+				</form>
+			</div>
+		</header>
+		<aside class="side">
+			<div class="about"> <i><a href="/"><img src="../images/my.jpg"></a></i>
+				<p>刘志年，一个90后草根男（其实也快是00后了；；哈哈）！！！18年入行。一直潜心研究java后端开发，一边工作一边积累经验，分享一些在个人开发过程中遇到的问题并记录下来，方便他人，也方便自己</p>
+			</div>
+			<div class="weixin"><img src="../images/WeChat.jpg">
+				<p>关注我 么么哒！</p>
+			</div>
+		</aside>
+		<main>
+		</main>
+		<div class="main-content">
+			<div class="welcome">您现在的位置是：首页->动态可编辑</div>
+			<div class="blogbox">
+				<div class="bloglist">
+					<ul>
+						<li>
+							<p class="blogtext"> &lt;button id="btn_update" class="jui-btn jui-btn-sm" data-pkid={{id}}>&lt;i class="jui-icon">&#xe642;/&gt;&gt;button></p>
+							<p class="blogtext">//jsp中的修改按钮</p>
+							<p class="blogtext">&lt;td&gt;&lt;div class=&quot;base-wrap left&quot; id=&quot;number{{id}}&quot; title=&quot;{{number}}&quot;&gt;{{number}}&lt;/div&gt;&lt;/td&gt;</td></p>
+							<p class="blogtext">//jsp中table中需修改的td</p>
+							<p class="blogtext">$('#datalist').on('click', '#btn_update', function() {</p>
+							<p class="blogtext"> $(this).next().show()</p>
+							<p class="blogtext">//点击修改后保存的按钮show</p>
+							<p class="blogtext">var id = $(this).data('pkid');{</p>
+							<p class="blogtext">//获取按钮的pkid</p>
+							<p class="blogtext"> var number = $("#number" + id).html();</p>
+							<p class="blogtext"> //然后获取到td中的值</p>
+							<p class="blogtext">$("#number" + id).html("");</p>
+							<p class="blogtext">//将现在当前的值置空</p>
+							<p class="blogtext">var input = $("&lt;input type=&#x27;text&#x27; style=&#x27;width:150px&#x27; name=&#x27;number&#x27;/&gt;");</p>
+							<p class="blogtext">//先申明一个input</p>
+							<p class="blogtext">input.attr("id", "input" + id);</p>
+							<p class="blogtext">//给input添加input属性</p>
+							<p class="blogtext">input.attr("value", number)</p>
+							<p class="blogtext">//将number赋值给input的value</p>
+							<p class="blogtext">$("#number" + id).append(input);</p>
+							<p class="blogtext">//将input给之前的td</p>
+							<p class="blogtext"style="color: red;">最后点击确定按钮响应后台数据即可</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="rside">
+				<div class="news">
+					<h2 class="newstitle"><b>文章排行</b></h2>
+					<ul>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+						<li>
+							<a href="/"><span>08-30</span>Yeah</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<body>
+		</body>
+
+</html>
